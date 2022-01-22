@@ -1,5 +1,5 @@
 const root = document.querySelector(":root");
-console.log(root);
+
 const checkBox = document.querySelector(".checkbox");
 
 checkBox.addEventListener("click", () => {

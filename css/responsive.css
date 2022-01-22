@@ -9,6 +9,11 @@
 ================================================================================*/
 
 @media (max-width: 991px) {
+  .col,
+  .scol {
+    width: calc(50% - 20px);
+    margin: 12px 0px;
+  }
 }
 
 /*=================================================================================
@@ -18,12 +23,20 @@
 @media (max-width: 767px) {
   header {
     display: block;
-    padding: 10px 20px;
+    padding: 10px 0px;
+  }
+  header::after {
+    height: 30%;
   }
   .left {
     display: flex;
 
     justify-content: space-between;
+  }
+  .col,
+  .scol {
+    width: calc(50% - 30px);
+    margin: 15px;
   }
 }
 /*================================================================================
@@ -31,15 +44,27 @@
   ================================================================================*/
 
 @media (max-width: 530px) {
+  .col,
+  .scol {
+    width: calc(100% - 20px);
+    margin: 15px 0;
+  }
+  .scol {
+    margin: 10px 0;
+  }
+  .container {
+    padding: 0px 20px;
+  }
 }
 
 /*=================================================================================
                                    330
 ================================================================================*/
 @media (max-width: 400px) {
-  header {
+  header,
+  .OverView {
     display: block;
-    padding: 10px 20px;
+    padding: 10px 10px;
   }
   .container {
     width: 100%;
@@ -48,14 +73,39 @@
   }
   .col,
   .scol {
-    width: 310px;
+    width: calc(100% - 20px);
+    margin-top: 10px;
   }
+  /* .scol {
+    margin-top: 10px;
+  } */
   .heading {
-    font-size: 25px;
+    font-size: 23px;
   }
   .left {
     display: flex;
 
     justify-content: space-between;
+  }
+}
+@media (max-width: 350px) {
+  header {
+    display: block;
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+
+    padding: 0px 10px;
+  }
+  .col,
+  .scol {
+    width: calc(100% - 20px);
+  }
+  .heading {
+    text-align: center;
+  }
+  .right {
+    text-align: center;
   }
 }
